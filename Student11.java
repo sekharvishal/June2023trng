@@ -1,20 +1,27 @@
 class Student11{
 int rollno;
-String name;
-void insertRecord(int r,String n){
-rollno=r;
-name=n;
-}
+String  name;
+float fee;
+Student11(){};
 
-void displayinformation(){ System.out.println(rollno+" "+name);}
+Student11(int rollno,String name,float fee){
+this.rollno=rollno;
+this.name=name;
+this.fee=fee;
+
 }
-class TestStudent4{
-public static void main(String[] args){
-Student11 s1=new Student11();
+void display(){System.out.println(rollno+" "+name+" "+fee);}
+}
+class TestThis2{
+public static void main(String[]args){
+Student11 s1=new Student11(495,"VISHAL",50000);
 Student11 s2=new Student11();
-s1.insertRecord(111,"vishal");
-s2.insertRecord(222,"vvv");
-s1.displayinformation();
-s2.displayinformation();
+s2.rollno=478;
+s2.name="ROHIT";
+s2.fee=10000;
+Student11  s3=new Student11(493,"RAMU",4568);
+s1.display();
+s2.display();
+s3.display();
 }
 }
