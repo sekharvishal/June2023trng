@@ -1,23 +1,29 @@
 class Student1{
-int id;
+int rollno;
 String name;
+static String college="ITS";
+static void change(){
+
+college="A.Mreddy";
 
 }
-class Student2{
-public static void main(String[] args){
-
-Student s1=new Student();
-Student s2=new Student();
-s1.id=495;
-s1.name="VISHAL";
-s2.id=111;
-s2.name="Vvvvvvvvv";
-System.out.println("\n\n"+s1.id+"  -> "+s1.name);
-System.out.println("\n\n"+s2.id+"  -> "+s2.name);
-
-
-
-
-
-} 
+Student1 (int rollno,String name){
+this.rollno=rollno;
+this.name=name;
 }
+void display(){System.out.println(rollno+" "+name+" "+college);}
+
+}
+ class TestStaticMethod{
+public static  void main(String[]args){
+
+Student1 s1=new Student1(111,"Vishal");
+Student1 s2=new Student1(222,"ccccccc");
+Student1.change();
+Student1 s3=new Student1(333,"bbbbbb");
+s1.display();
+s2.display();
+s3.display();
+}
+}
+ 

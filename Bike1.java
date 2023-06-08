@@ -1,7 +1,13 @@
 class Bike1{
-Bike1(){System.out.print("Bike is Created");}
+// final void run(){System.out.println("running");} reports error
 
-public static void main(String[]args){
-Bike1 b=new Bike1();
+void run(){System.out.println("Running");}
+}
+class Bullet extends Bike1{
+void run(){System.out.println("running safetly with 100kmph");}
+public static void  main(String[]args){
+Bullet b=new Bullet();
+b.run();
+
 }
 }
