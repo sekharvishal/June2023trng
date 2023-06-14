@@ -1,15 +1,19 @@
-//Example of  single Inheritance
+import  java.util.Scanner;
 class Animal{
-void eat(){System.out.println("Eating.......");}}
-
+void eat(){System.out.println("eating.............");
+}
+}
 class Dog extends Animal{
-void bark(){System.out.println("barking.....");}}
-
-class TestInheritance{
-public  static void main(String[]args){
+void eat(){System.out.println("eating bread...");}
+void bark(){System.out.println("barking.....");}
+void work(){
+super.eat();
+bark();
+}
+}
+class Testsuper2{
+public static void main(String[]args){
 Dog d=new Dog();
-Animal a=new Animal();
-d.bark();
-d.eat();
-}
-}
+d.work();
+}}
+ 

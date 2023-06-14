@@ -1,16 +1,17 @@
-import java.util.Scanner;
+import  java.util.Scanner;
 class Factorial{
+public static  int calculateFact(int n){
+if(n==0)return 1;
+else return n*calculateFact(n-1);
+}
+//calculateFact
 public static void main(String[]args){
 Scanner s=new Scanner(System.in);
-int i,j,h;
-h=1;
-j=s.nextInt();
-for(i=1;i<=j;i++){
-System.out.print(i);
-h=h*i;
-if(i<j){System.out.print("*");}
-}
-System.out.println("="+h);
-System.out.print("  Factorial : "+h);
+int a=s.nextInt();
+if(a>0)
+System.out.println(calculateFact(a));
+else
+System.out.println("INVALID");
+
 }
 }

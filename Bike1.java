@@ -1,13 +1,15 @@
-class Bike1{
-// final void run(){System.out.println("running");} reports error
-
-void run(){System.out.println("Running");}
-}
-class Bullet extends Bike1{
-void run(){System.out.println("running safetly with 100kmph");}
-public static void  main(String[]args){
-Bullet b=new Bullet();
-b.run();
+abstract class Bike{
+Bike(){System.out.println("Bike is created");}
+abstract void run();
+void changeGear(){System.out.println("gear changed");}
 
 }
+class Honda extends Bike{
+void run(){System.out.println("running slowly");}
 }
+class TestAbstract2{
+public static void main(String[]args){
+Bike obj=new Honda();
+obj.run();
+obj.changeGear();
+}}
