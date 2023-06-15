@@ -1,9 +1,10 @@
-class A{
-A  get(){return this;}}
-class B1 extends A{
-B1  get(){return this;}
-void message(){System.out.println("Welcome to convarient return type ");}
+interface printable{
+void print();
+}
+class A implements printable{
+public void print(){System.out.print("Hello");}
 public static void main(String[]args){
-new B1().get().message();
+A obj=new A();
+obj.print();
 }
 }

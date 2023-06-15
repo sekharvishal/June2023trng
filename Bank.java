@@ -1,20 +1,14 @@
-abstract class Bank{
-abstract int getRateOfInterest();
+interface Bank{
+float rateOfInterest();
 }
-class SBI extends Bank{
-int getRateOfInterest(){return 7;}
+class SBI implements Bank{
+public float rateOfInterest(){return 9.15f ;}
 }
-class PNB extends Bank{
-int getRateOfInterest(){return 8;}
+class PNB implements Bank{
+public float rateOfInterest(){return 9.7f;}
 }
-class TestBank{
-public static void main(String []args){
-Bank b;
-b=new PNB();
-System.out.println("Rate Of Interest is : "+b.getRateOfInterest()+"%");
-b=new SBI();
-System.out.println("Rate Of Interest is : "+b.getRateOfInterest()+"%");
-
-
-}
-}
+class TestInterface2{
+public static void main(String[]args){
+Bank b=new SBI();
+System.out.println("ROL: "+b.rateOfInterest());
+}}

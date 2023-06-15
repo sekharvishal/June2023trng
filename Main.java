@@ -1,15 +1,12 @@
-class Main extends Thread{
-public static int amount =0;
+class Main{
 public static void main(String[]args){
-Main thread =new Main();
-thread.start();
-while(thread.isAlive()){
-System.out.println("Waiting.......");
+try{
+int arr[]={1,2,3,4,5};
+System.out.println(arr[10]);
 }
-System.out.println("Main : "+amount);
-amount++;
-System.out.println("Main : "+amount);
+catch(ArrayIndexOutOfBoundsException e){
+System.out.println("ArrayIndexOutOfBoundsException");
 }
-public void run() {amount++;}
+System.out.println("Finally block ");
 }
- 
+}
