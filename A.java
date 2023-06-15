@@ -1,13 +1,9 @@
 class A{
-void m(){System.out.println("hello m");}
-void n(){
-System.out.println("hellon n");
-this.m();
-}
-}
-class TestThis4{
-public static  void main(String[]args){
-A a=new A();
-a.n();
+A  get(){return this;}}
+class B1 extends A{
+B1  get(){return this;}
+void message(){System.out.println("Welcome to convarient return type ");}
+public static void main(String[]args){
+new B1().get().message();
 }
 }
